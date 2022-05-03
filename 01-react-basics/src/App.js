@@ -9,6 +9,8 @@ const App = () => {
   const [monsters, setMonsters] = useState([]);
   const [filteredMonters, setFilteredMonsters] = useState(monsters);
 
+  console.log('rendered');
+
   useEffect(() => {
     // code of anything that we want to happen to our functional component
     fetch('https://jsonplaceholder.typicode.com/users')
