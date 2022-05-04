@@ -1,3 +1,5 @@
+import './categories.styles.scss';
+
 const App = () => {
   const categories = [
     {
@@ -6,22 +8,22 @@ const App = () => {
       imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
     },
     {
-      id: 1,
+      id: 2,
       title: 'Jackets',
       imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
     },
     {
-      id: 1,
+      id: 3,
       title: 'Sneakers',
       imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
     },
     {
-      id: 1,
+      id: 4,
       title: 'Womens',
       imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
     },
     {
-      id: 1,
+      id: 5,
       title: 'Mens',
       imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
     },
@@ -29,8 +31,8 @@ const App = () => {
 
   return (
     <div className="categories-container">
-      {categories.map(({ title }) => (
-        <div className="catergory-container">
+      {categories.map(({ title, id }) => (
+        <div className="category-container" key={id}>
           <div className="background-image" />
           <div className="category-body-container">
             <h2>{title}</h2>
